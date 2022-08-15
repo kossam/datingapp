@@ -1,0 +1,35 @@
+<mat-card>
+    <img class="avatars mat-elevation-z8" src="../../../assets/singlesLounge1.jpg" />
+      <mat-card-title>Register</mat-card-title>
+      <mat-card-content>
+        <form #loginForm="ngForm" (ngSubmit)="register()">
+          <p>
+            <mat-form-field>
+              <input type="text" name="username" [(ngModel)]="model.username" matInput placeholder="Username">
+            </mat-form-field>
+          </p>
+    
+          <p>
+            <mat-form-field>
+              <input type="password" name="password" [(ngModel)]="model.password" matInput placeholder="Password">
+            </mat-form-field>
+          </p>
+    
+          <!-- <p *ngIf="error" class="error">
+        {{ error }}
+      </p> -->
+    
+          <div class="row">
+            <p>Have an account?</p><a href="/login">Login</a>
+        </div>
+        <div class="button">
+            <button type="submit" mat-raised-button color="primary">
+                <mat-icon>register</mat-icon>
+                Register
+              </button>
+        </div>
+    
+        </form>
+      </mat-card-content>
+    </mat-card>
+  
